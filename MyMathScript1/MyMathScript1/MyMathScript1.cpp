@@ -8,18 +8,20 @@ std::string MyMathScript::ReadSimpleScript(std::string Script)
 {
 	int int1;
 	int int2;
+	std::string strscript;
 	int sum = 0;
 	for (int i = 0; i < Script.length(); i++)
 	{
 		int1 = 0;
 		int2 = 0;
+		strscript = "";
 		if (Script[i] == '+')
 		{
 			for (int j = i+1; j < Script.length(); j++)
 			{
 				if(Script[j] != '+')
 				{
-					int1 = int1 + int(Script[j]);
+					int1 = int1 + atoi(&Script[j]);
 				}
 				else
 				{
@@ -30,7 +32,7 @@ std::string MyMathScript::ReadSimpleScript(std::string Script)
 			{
 				if(Script[k] != '+' && sum == 0)
 				{
-					int2 = int2 + int(Script[k]);
+					int2 = int2 + atoi(&Script[k]);
 				}
 				else if(sum != 0)
 				{
