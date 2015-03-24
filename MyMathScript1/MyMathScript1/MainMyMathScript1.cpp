@@ -5,9 +5,12 @@
 int main()
 {
 	MyMathScript myscript;
-	std::string input = "25+236+1";
-	myscript.ReadSimpleScript(input);
-
-	//std::cout<<s; myscript.Sum(s[1],s[3]); //Система ASCII
+	std::string input = "31+25+-236+2+-80";
+	std::cout<<input<<std::endl;
+	std::cout<<std::endl;
+	myscript.ReadScript(input);
+	//myscript.ReadSimpleScript(input);
 	std::cin.get();
 }
+
+//Используется система ASCII
