@@ -8,7 +8,7 @@ public:
 
 	std::string Script;
 	std::string ReadSimpleScript(const std::string & Script);
-	void ReadScript(std::string Script);
-	std::string SearchScript();
-	int MyMathScript::Sum(int a, int b);
+	//void ReadScript(std::string Script);
+	//std::string SearchScript();
+	//int MyMathScript::Sum(int a, int b);
 };

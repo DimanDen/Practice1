@@ -5,9 +5,9 @@
 template <typename T>
 T StringConv(const std::string & str) 
 {
-    T summand1;
+    T summand;
 	std::istringstream ss(str);
-	ss >> summand1;
-	return summand1;
+	ss >> summand;
+	return summand;
 }
 	
