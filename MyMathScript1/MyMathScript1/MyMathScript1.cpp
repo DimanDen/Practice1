@@ -1,5 +1,4 @@
 #include "MyMathScript1.h"
-#include <vector>
 #include "StringConvert.h"
 
 MyMathScript::MyMathScript()
@@ -10,29 +9,34 @@ MyMathScript::MyMathScript(const std::string & Script)
 {
 }
 
-std::string MyMathScript::ReadScript(std::string Script) 
+std::string MyMathScript::ReadScript(std::string Script)  //Функция, отправляющая строку на преобразование. Т.к. строка будет меняться входе работы функции, то написал её без "const"
 {
 	ReadFunctionInScript(Script);
 	return Script;
 }
 
-std::string MyMathScript::ReadFunctionInScript(std::string Script)
+std::string MyMathScript::ReadFunctionInScript(std::string Script) //Функция выполнения словесных операторов (sin, cos ...)
 {
 	ReadBrackets(Script);
 	return Script;
 }
 
-std::string MyMathScript::ReadBrackets(std::string Script)
+std::string MyMathScript::ReadBrackets(std::string Script) //Функция определения скобок в выражении
+{
+	ReadOperators(Script);
+	return Script;
+}
+
+std::string MyMathScript::ReadOperators(std::string Script) //Функция выполнения операций умножения, деления...
 {
 	ReadBasicScript(Script);
 	return Script;
 }
 
-std::string MyMathScript::ReadBasicScript(const std::string & Script)
+std::string MyMathScript::ReadBasicScript(const std::string & Script) //Функция подсчета простого выражения, содержащего операции сложения и вычитания
 {
-	double result = 0; //Результирующее значение
+	result = 0; //Результирующее значение
 	std::string StrSummand; 
-	//std::vector<char> SignVector; 
 	char sign = '+'; //По умолчанию значение числа полажительно
 
 	for (unsigned int i = 0; i < Script.length(); i++)
@@ -59,24 +63,21 @@ std::string MyMathScript::ReadBasicScript(const std::string & Script)
 				sign = '-';
 			}
 		}
-		if(Script[i] != '+' && Script[i] != '-') //Если мы "наткнулись" сразу на число. (Значение занка по умолчанию: плюс)
+		if(Script[i] != '+' && Script[i] != '-') //Если мы "наткнулись" не на знаки.
 		{
 			StrSummand +=Script[i];
-			if (Script[i+1] == '+' || Script[i+1]  == '-' || i == (Script.length()-1))
+			if (Script[i+1] == '+' || Script[i+1]  == '-' || i == (Script.length()-1)) //Если символы, обознащающие цифры числа, закончились, то переводим строку в числовой тип
 			{
 				result += StringConv<double>(sign+StrSummand); //Перевод параметра в числовой тип. В качестве аргумента функции выступает строка, в которой содержится знак и число.
 				StrSummand = "";
-				//printf("Sum = %f\n",result);
 				sign = '+'; //Ставим по умолчанию положительно значение
 			}
 		}
 	}
-	//printf("Result = %f",result);
 	return Script;
 }
 
-/*double MyMathScript::GetResult(double result)
+double MyMathScript::GetResult() //Функция вывода результата
 {
-	//printf("Result = %f",result);
 	return result;
-}*/
+}
