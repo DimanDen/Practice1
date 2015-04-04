@@ -1,5 +1,6 @@
 #include "MyMathScript1.h"
 #include "StringConvert.h"
+#include "StringReverse.h"
 
 MyMathScript::MyMathScript()
 {
@@ -29,6 +30,53 @@ std::string MyMathScript::ReadBrackets(std::string Script) //Функция определения
 
 std::string MyMathScript::ReadOperators(std::string Script) //Функция выполнения операций умножения, деления...
 {
+	double operand1;
+	double operand2;
+	double ResultOp = 0;
+	std::string StrResultOp;
+	
+	for (unsigned int i = 0; i < Script.length(); i++)
+	{
+		operand1 = 0;
+		operand2 = 0;
+		if (Script[i] == '*')
+		{
+			for (unsigned int j = i+1; j < Script.length(); j++)
+			{
+				if(Script[j] != '+' && Script[j] != '-' && Script[j] != '*' && Script[j] != '/')
+				{
+					StrResultOp += Script[j];
+				}
+				else 
+				{
+					break;
+				}
+			}
+
+			operand1 = StringConv<double>(StrResultOp);
+			StrResultOp = "";
+
+			for (int k = i-1; k > -1; --k)
+			{
+				if(Script[k] != '+' && Script[k] != '-' && Script[k] != '*' && Script[k] != '/')
+				{
+					StrResultOp += Script[k];
+				}
+				else
+				{
+					break;
+				}
+				if(k == 0)
+				{
+					break;
+				}
+			}
+			operand2 = StringConv<double>(StringRev(StrResultOp));
+			ResultOp = operand1 * operand2;
+			//Script.replace(Script[2,3],ResultOp);
+			StrResultOp = "";
+		}
+	}
 	ReadBasicScript(Script);
 	return Script;
 }

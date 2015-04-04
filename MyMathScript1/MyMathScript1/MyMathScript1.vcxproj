@@ -82,6 +82,7 @@
   <ItemGroup>
     <ClInclude Include="MyMathScript1.h" />
     <ClInclude Include="StringConvert.h" />
+    <ClInclude Include="StringReverse.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

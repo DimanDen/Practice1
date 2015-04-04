@@ -5,7 +5,7 @@
 int main()
 {
 	MyMathScript myscript;
-	std::string input = "31.3-+25.2+1";
+	std::string input = "2+31*25+4";
 	std::cout<<input<<std::endl;
 	std::cout<<std::endl;
 	myscript.ReadScript(input); 
