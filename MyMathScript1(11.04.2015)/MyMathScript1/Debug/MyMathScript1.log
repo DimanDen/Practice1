@@ -1,0 +1,12 @@
+﻿Построение начато 11.04.2015 9:39:52.
+     1>Проект "C:\Users\Дмитрий\Documents\Visual Studio 2012\Projects\MyMathScript1\MyMathScript1\MyMathScript1.vcxproj" в узле 2 (целевые объекты Build).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Дмитрий\Documents\Visual Studio 2012\Projects\MyMathScript1\Debug\MyMathScript1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Дмитрий\Documents\Visual Studio 2012\Projects\MyMathScript1\Debug\MyMathScript1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Дмитрий\Documents\Visual Studio 2012\Projects\MyMathScript1\Debug\MyMathScript1.lib" /MACHINE:X86 Debug\MainMyMathScript1.obj
+         Debug\MyMathScript1.obj
+     1>MainMyMathScript1.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __thiscall MyMathScript::ReadScript(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?ReadScript@MyMathScript@@QAE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V23@@Z) в функции _main
+     1>C:\Users\Дмитрий\Documents\Visual Studio 2012\Projects\MyMathScript1\Debug\MyMathScript1.exe : fatal error LNK1120: неразрешенных внешних элементов: 1
+     1>Построение проекта "C:\Users\Дмитрий\Documents\Visual Studio 2012\Projects\MyMathScript1\MyMathScript1\MyMathScript1.vcxproj" завершено (целевые объекты Build) с ошибкой.
+
+Сбой построения.
+
+Затраченное время: 00:00:00.53
