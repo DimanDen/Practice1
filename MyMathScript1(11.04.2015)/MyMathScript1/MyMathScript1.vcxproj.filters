@@ -26,13 +26,13 @@
     <ClInclude Include="StringConvert.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="StringReverse.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
     <ClInclude Include="MyMathScript1.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
     <ClInclude Include="StringReplace.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="DeleteSpaces.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
   </ItemGroup>

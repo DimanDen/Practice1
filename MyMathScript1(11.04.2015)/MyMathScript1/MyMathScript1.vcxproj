@@ -80,10 +80,10 @@
     <ClCompile Include="MyMathScript1.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DeleteSpaces.h" />
     <ClInclude Include="MyMathScript1.h" />
     <ClInclude Include="StringConvert.h" />
     <ClInclude Include="StringReplace.h" />
-    <ClInclude Include="StringReverse.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

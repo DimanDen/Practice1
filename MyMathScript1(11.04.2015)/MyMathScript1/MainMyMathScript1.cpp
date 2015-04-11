@@ -5,17 +5,16 @@
 int main()
 {
 	MyMathScript myscript;
-	MyMathScript myscript1 = myscript;
 
-	std::string str; 
-	std::cin >> str;
-	std::string input = str;//"5+10*5+5+2*3-80/20";
-	std::cout<<input<<std::endl;
+	std::string StrInput; 
+	std::cin >> StrInput;
+	std::string input = StrInput;
+	//std::cout<<input<<std::endl;
 	std::cout<<std::endl;
 	myscript.ReadScript(input); 
 	printf("Sum = %f\n",myscript.GetResult());
 	
-	std::cin >> str;
+	std::cin >> StrInput;
 }
 
 //Используется система ASCII

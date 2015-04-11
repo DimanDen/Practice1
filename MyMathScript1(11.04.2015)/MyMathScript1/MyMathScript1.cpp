@@ -1,6 +1,7 @@
 #include "MyMathScript1.h"
 #include "StringConvert.h"
 #include "StringReplace.h"
+#include "DeleteSpaces.h"
 
 
 MyMathScript::MyMathScript() : result(0)
@@ -39,7 +40,8 @@ std::string MyMathScript::ReadOperators(const std::string & Script) //Функция вы
 	int IndexReplaceLeft = -1; //Левый индекс, с которого будет начинаться вставка строки, которая содержит результат операции
 	int IndexReplaceRight; //Правый индекс
 	std::string StrResultOp; //Сначала хранит в себе значения операндов в строков типе, затем, в конце итерации хранит результат
-
+	
+	Script1 = DeleteSpaces(Script1);
 	for (unsigned int i = 0; i < Script1.length(); i++)
 	{
 		operand1 = 0;
